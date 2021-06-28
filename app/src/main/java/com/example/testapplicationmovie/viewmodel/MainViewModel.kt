@@ -8,6 +8,7 @@ import com.example.testapplicationmovie.model.RetrofitRepository
 class MainViewModel(private val repository: RetrofitRepository) : ViewModel() {
 
     val listOfMovies: MutableLiveData<Movie> = repository.listOfMovie
+    val error: MutableLiveData<String> = repository.error
 
     fun initRetrofit(offset: Int) {
         repository.initRetrofit(offset)
