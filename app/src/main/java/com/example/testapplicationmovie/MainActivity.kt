@@ -79,9 +79,7 @@ class MainActivity : AppCompatActivity() {
                     firstVisibleItemPosition = firstVisibleItems[0];
                 }
 
-                if (isScrolling && (firstVisibleItemPosition + visibleItemCount) >= (totalItemCount - 6)
-                    || isScrolling && dy < 0
-                ){
+                if (isScrolling && (firstVisibleItemPosition + visibleItemCount) >= (totalItemCount - 6) && dy > 0){
                     updateData()
                     binding.progressbar.visibility = View.VISIBLE
                 }
